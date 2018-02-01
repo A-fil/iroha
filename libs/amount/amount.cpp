@@ -24,7 +24,7 @@
 namespace iroha {
 
   // to raise to power integer values
-  int ipow(int base, int exp) {
+  static int ipow(int base, int exp) {
     int result = 1;
     while (exp != 0) {
       if (exp & 1) {
@@ -37,7 +37,7 @@ namespace iroha {
     return result;
   }
 
-  uint256_t getJointUint256(uint64_t first,
+  static uint256_t getJointUint256(uint64_t first,
                             uint64_t second,
                             uint64_t third,
                             uint64_t fourth) {

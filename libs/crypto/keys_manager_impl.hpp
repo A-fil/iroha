@@ -18,12 +18,13 @@
 #ifndef IROHA_CLI_KEYS_MANAGER_IMPL_HPP
 #define IROHA_CLI_KEYS_MANAGER_IMPL_HPP
 
-#include "common/byteutils.hpp"
-#include "common/types.hpp"
+#include <nonstd/optional.hpp>
+#include "common/types.hpp"  // for keypair_t, pubkey_t, privkey_t
 #include "crypto/keys_manager.hpp"
 #include "logger/logger.hpp"
 
 namespace iroha {
+
   class KeysManagerImpl : public KeysManager {
    public:
     explicit KeysManagerImpl(const std::string &account_name);

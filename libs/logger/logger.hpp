@@ -26,6 +26,10 @@ limitations under the License.
 
 #include <spdlog/spdlog.h>
 
+namespace spdlog{
+  class logger;
+}
+
 namespace logger {
 
   using Logger = std::shared_ptr<spdlog::logger>;

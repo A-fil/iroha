@@ -19,6 +19,7 @@
 #define IROHA_RESULT_HPP
 
 #include "common/visitor.hpp"
+#include <boost/variant.hpp>
 
 /*
  * Result is a type which represents value or an error, and values and errors
