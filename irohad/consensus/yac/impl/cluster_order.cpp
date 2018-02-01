@@ -47,6 +47,14 @@ namespace iroha {
         ++index_;
         return *this;
       }
+
+      std::vector<model::Peer> ClusterOrdering::getPeers() {
+        return order_;
+      }
+
+      size_t ClusterOrdering::getNumberOfPeers() {
+        return order_.size();
+      }
     }  // namespace yac
   }    // namespace consensus
 }  // namespace iroha

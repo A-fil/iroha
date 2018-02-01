@@ -14,13 +14,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 #include "consensus/yac/storage/yac_block_storage.hpp"
-
 #include <algorithm>
 #include <utility>
-
 #include "consensus/consensus_common.hpp"
+#include "consensus/yac/messages.hpp"
 
 using namespace logger;
 
@@ -56,11 +54,11 @@ namespace iroha {
         return getState();
       }
 
-      auto YacBlockStorage::getVotes() -> decltype(votes_) {
+      std::vector<VoteMessage> YacBlockStorage::getVotes() {
         return votes_;
       }
 
-      auto YacBlockStorage::getNumberOfVotes() -> decltype(votes_)::size_type {
+      size_t YacBlockStorage::getNumberOfVotes() const {
         return votes_.size();
       }
 

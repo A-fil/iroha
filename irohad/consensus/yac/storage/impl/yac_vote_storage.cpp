@@ -18,6 +18,7 @@
 #include <algorithm>
 #include <utility>
 
+#include "consensus/yac/storage/yac_proposal_storage.hpp"
 #include "consensus/yac/storage/yac_vote_storage.hpp"
 
 namespace iroha {

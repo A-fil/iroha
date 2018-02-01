@@ -18,8 +18,9 @@
 #ifndef IROHA_CLUSTER_ORDER_HPP
 #define IROHA_CLUSTER_ORDER_HPP
 
+#include <nonstd/optional.hpp>
 #include <vector>
-#include "model/peer.hpp"
+#include "model/peer.hpp"  // for Peer, because currentLeader() returns by value
 
 namespace iroha {
   namespace consensus {
@@ -54,20 +55,17 @@ namespace iroha {
          */
         bool hasNext();
 
-        std::vector<model::Peer> getPeers() {
-          return order_;
-        };
+        std::vector<model::Peer> getPeers();
 
-        auto getNumberOfPeers() {
-          return order_.size();
-        }
+        size_t getNumberOfPeers();
 
         virtual ~ClusterOrdering() = default;
+
+        ClusterOrdering() = delete;
 
        private:
         // prohibit creation of the object not from create method
         explicit ClusterOrdering(std::vector<model::Peer> order);
-        ClusterOrdering() = delete;
 
         std::vector<model::Peer> order_;
         uint32_t index_ = 0;

@@ -18,19 +18,21 @@
 #ifndef IROHA_NETWORK_IMPL_HPP
 #define IROHA_NETWORK_IMPL_HPP
 
-#include <atomic>
-#include <thread>
+#include <memory>
 #include <unordered_map>
-
-#include "ametsuchi/peer_query.hpp"
-#include "consensus/yac/transport/yac_network_interface.hpp"
+#include "consensus/yac/transport/yac_network_interface.hpp"  // for YacNetwork
 #include "logger/logger.hpp"
+#include "model/peer.hpp"
 #include "network/impl/async_grpc_client.hpp"
 #include "yac.grpc.pb.h"
 
 namespace iroha {
   namespace consensus {
     namespace yac {
+
+      class CommitMessage;
+      class RejectMessage;
+      class VoteMessage;
 
       /**
        * Class provide implementation of transport for consensus based on grpc

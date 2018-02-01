@@ -15,7 +15,9 @@
  * limitations under the License.
  */
 #include <grpc++/grpc++.h>
+#include <memory>
 
+#include "consensus/yac/messages.hpp"
 #include "consensus/yac/transport/impl/network_impl.hpp"
 #include "consensus/yac/transport/yac_pb_converters.hpp"
 #include "logger/logger.hpp"
