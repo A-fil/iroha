@@ -28,11 +28,12 @@
 #include "interfaces/common_objects/types.hpp"
 #include "interfaces/iroha_internal/block.hpp"
 #include "interfaces/transaction.hpp"
+#include "validators/default_validator.hpp"
 
 namespace shared_model {
   namespace proto {
 
-  /**
+    /**
      * Template block builder for creating new types of block builders by
      * means of replacing template parameters
      * @tparam S -- field counter for checking that all required fields are set
@@ -60,7 +61,7 @@ namespace shared_model {
       };
 
       template <int s>
-      using NextBuilder = TemplateBlockBuilder<S | (1 << s), SV>;
+      using NextBuilder = TemplateBlockBuilder<S | (1 << s), SV, BT>;
 
       iroha::protocol::Block block_;
       SV stateless_validator_;
