@@ -16,6 +16,7 @@
  */
 
 #include "consensus/yac/impl/peer_orderer_impl.hpp"
+#include <algorithm>
 #include <random>
 
 namespace iroha {

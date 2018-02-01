@@ -19,7 +19,7 @@
 #include "ametsuchi/impl/postgres_wsv_query.hpp"
 #include "ametsuchi/impl/redis_block_index.hpp"
 #include "model/commands/transfer_asset.hpp"
-
+#include "model/execution/command_executor_factory.hpp"  // for iroha::model::CommandExecutorFactory
 #include "model/sha3_hash.hpp"
 
 namespace iroha {

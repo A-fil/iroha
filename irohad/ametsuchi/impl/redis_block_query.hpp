@@ -20,7 +20,6 @@
 
 #include <cpp_redis/cpp_redis>
 #include "ametsuchi/block_query.hpp"
-#include "ametsuchi/impl/flat_file/flat_file.hpp"
 
 #include "model/converters/json_block_factory.hpp"
 
@@ -28,6 +27,9 @@
 
 namespace iroha {
   namespace ametsuchi {
+
+    class FlatFile;
+
     /**
      * Class which implements BlockQuery with a Redis backend.
      */

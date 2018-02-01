@@ -19,16 +19,20 @@
 #define IROHA_WSV_QUERY_HPP
 
 #include <common/types.hpp>
-#include <model/account.hpp>
-#include <model/account_asset.hpp>
-#include <model/asset.hpp>
-#include <model/peer.hpp>
 #include <nonstd/optional.hpp>
 #include <string>
 #include <vector>
-#include "model/domain.hpp"
 
 namespace iroha {
+
+  namespace model {
+    class Domain;
+    class Account;
+    class AccountAsset;
+    class Peer;
+    class Asset;
+  }
+
   namespace ametsuchi {
 
     /**

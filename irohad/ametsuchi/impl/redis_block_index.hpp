@@ -19,6 +19,7 @@
 #define IROHA_REDIS_BLOCK_INDEX_HPP
 
 #include "ametsuchi/impl/block_index.hpp"
+#include "model/transaction.hpp" // for model::Transaction::CommandsType
 
 #include <boost/format.hpp>
 #include <cpp_redis/cpp_redis>

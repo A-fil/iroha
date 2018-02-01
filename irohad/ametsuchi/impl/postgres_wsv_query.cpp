@@ -16,6 +16,12 @@
  */
 
 #include "ametsuchi/impl/postgres_wsv_query.hpp"
+#include "model/account.hpp"
+#include "model/asset.hpp"
+#include "model/account_asset.hpp"
+#include "model/domain.hpp"
+#include "model/peer.hpp"
+
 
 namespace iroha {
   namespace ametsuchi {

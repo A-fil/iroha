@@ -18,11 +18,24 @@
 #ifndef IROHA_POSTGRES_WSV_COMMAND_HPP
 #define IROHA_POSTGRES_WSV_COMMAND_HPP
 
-#include "ametsuchi/wsv_command.hpp"
-#include "postgres_wsv_common.hpp"
+#include <set>
+#include <string>
+#include "ametsuchi/impl/postgres_wsv_common.hpp"
+#include "ametsuchi/wsv_command.hpp" // for WsvCommand
+#include "logger/logger.hpp"
 
 namespace iroha {
+
+  namespace model {
+    class Asset;
+    class Account;
+    class Domain;
+    class Peer;
+    class AccountAsset;
+  }
+
   namespace ametsuchi {
+
     class PostgresWsvCommand : public WsvCommand {
      public:
       explicit PostgresWsvCommand(pqxx::nontransaction &transaction);

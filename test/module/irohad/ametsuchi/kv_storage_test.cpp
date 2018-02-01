@@ -18,6 +18,7 @@
 #include <gtest/gtest.h>
 #include "ametsuchi/block_query.hpp"
 #include "ametsuchi/impl/storage_impl.hpp"
+#include "ametsuchi/mutable_storage.hpp"
 #include "model/commands/create_account.hpp"
 #include "model/commands/create_domain.hpp"
 #include "model/commands/create_role.hpp"
@@ -25,6 +26,8 @@
 #include "model/permissions.hpp"
 #include "model/sha3_hash.hpp"
 #include "module/irohad/ametsuchi/ametsuchi_fixture.hpp"
+#include "model/account.hpp"
+
 
 using namespace iroha::ametsuchi;
 using namespace iroha::model;

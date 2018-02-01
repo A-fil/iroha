@@ -20,14 +20,18 @@
 
 #include <set>
 #include <string>
-#include "common/types.hpp"
-#include "model/account.hpp"
-#include "model/account_asset.hpp"
-#include "model/asset.hpp"
-#include "model/domain.hpp"
-#include "model/peer.hpp"
+#include "common/types.hpp"  // for pubkey_t
 
 namespace iroha {
+
+  namespace model {
+    class Asset;
+    class Account;
+    class Domain;
+    class Peer;
+    class AccountAsset;
+  }
+
   namespace ametsuchi {
 
     /**

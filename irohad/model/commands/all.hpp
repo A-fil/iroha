@@ -15,29 +15,24 @@
  * limitations under the License.
  */
 
-#ifndef IROHA_ADD_PEER_HPP
-#define IROHA_ADD_PEER_HPP
+#ifndef IROHA_ALL_HPP_
+#define IROHA_ALL_HPP_
 
-#include "model/command.hpp"
-#include "model/peer.hpp"
+#include "add_asset_quantity.hpp"
+#include "add_peer.hpp"
+#include "add_signatory.hpp"
+#include "append_role.hpp"
+#include "create_account.hpp"
+#include "create_asset.hpp"
+#include "create_domain.hpp"
+#include "create_role.hpp"
+#include "detach_role.hpp"
+#include "grant_permission.hpp"
+#include "remove_signatory.hpp"
+#include "revoke_permission.hpp"
+#include "set_account_detail.hpp"
+#include "set_quorum.hpp"
+#include "subtract_asset_quantity.hpp"
+#include "transfer_asset.hpp"
 
-namespace iroha {
-  namespace model {
-
-    class Peer;
-
-    /**
-     * Provide user's intent for adding peer to current network
-     */
-    struct AddPeer : public Command {
-      Peer peer;
-
-      bool operator==(const Command &command) const override;
-
-      AddPeer() {}
-
-      AddPeer(const Peer &peer) : peer(peer) {}
-    };
-  }  // namespace model
-}  // namespace iroha
-#endif  // IROHA_ADD_PEER_HPP
+#endif //  IROHA_ALL_HPP_

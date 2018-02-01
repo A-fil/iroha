@@ -20,12 +20,18 @@
 
 #include <memory>
 #include <vector>
+#include <nonstd/optional.hpp>
 #include "ametsuchi/peer_query.hpp"
-#include "ametsuchi/wsv_query.hpp"
-#include "model/peer.hpp"
 
 namespace iroha {
+
+  namespace model {
+    class Peer;
+  }
+
   namespace ametsuchi {
+
+    class WsvQuery;
 
     /**
      * Implementation of PeerQuery interface based on WsvQuery fetching
